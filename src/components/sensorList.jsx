@@ -59,7 +59,6 @@ class SensorList extends Component {
     <Sensor sensorDetails={sensor} />
   ));
 
-  count = this.sensorComponents.length;
   render() {
     return (
       <div className="grid-container">
