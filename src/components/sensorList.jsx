@@ -16,7 +16,7 @@ class SensorList extends Component {
         id: 11,
         floor: 2,
         room: 3,
-        co2: 10,
+        co2: 1,
         smoke: 4,
         active: true,
       },
@@ -24,7 +24,7 @@ class SensorList extends Component {
         id: 12,
         floor: 2,
         room: 3,
-        co2: 10,
+        co2: 1,
         smoke: 4,
         active: true,
       },
@@ -32,7 +32,23 @@ class SensorList extends Component {
         id: 12,
         floor: 2,
         room: 3,
-        co2: 10,
+        co2: 1,
+        smoke: 4,
+        active: true,
+      },
+      {
+        id: 12,
+        floor: 2,
+        room: 3,
+        co2: 1,
+        smoke: 4,
+        active: true,
+      },
+      {
+        id: 12,
+        floor: 2,
+        room: 3,
+        co2: 1,
         smoke: 4,
         active: true,
       },
@@ -46,10 +62,10 @@ class SensorList extends Component {
   count = this.sensorComponents.length;
   render() {
     return (
-      <div className="container">
-        <div className="row">
-          <div className="col-sm-12 text-center">{this.sensorComponents}</div>
-        </div>
+      <div className="grid-container">
+        {this.sensorComponents.map((comp) => (
+          <div>{comp}</div>
+        ))}
       </div>
     );
   }
