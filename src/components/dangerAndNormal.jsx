@@ -3,15 +3,15 @@ import React from "react";
 const DangerAndNormal = () => {
   const headerStyle = {
     display: "flex",
-    "flex-direction": "column",
-    "align-items": "center",
-    "justify-content": "center",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
   };
   return (
     <h3 style={headerStyle}>
-      If Sensor Normal <span class="badge badge-success"> GREEN</span>
+      If Sensor Normal <span className="badge badge-success"> GREEN</span>
       <br />
-      If Sensor Danger <span class="badge badge-danger"> RED </span>
+      If Sensor Danger <span className="badge badge-danger"> RED </span>
     </h3>
   );
 };

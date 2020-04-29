@@ -4,7 +4,7 @@ const Sensor = (props) => {
   const sensorDetails = props.sensorDetails;
   let sensorState;
   if (
-    !sensorDetails.active ||
+    !sensorDetails.is_active ||
     sensorDetails.co2 >= 5 ||
     sensorDetails.smoke >= 5
   ) {
@@ -23,7 +23,7 @@ const Sensor = (props) => {
           <div className="col">Sensor {sensorDetails.id}</div>
           <div className="col">
             <span className={badgeStateColor}>
-              {sensorDetails.active ? "active" : "Inactive"}
+              {sensorDetails.is_active ? "active" : "Inactive"}
             </span>
           </div>
         </div>
@@ -36,10 +36,10 @@ const Sensor = (props) => {
             </div>
             <div className="col">
               <span className={badgeStateColor}>
-                floor: {sensorDetails.floor}{" "}
+                floor: {sensorDetails.floor_no}{" "}
               </span>
               <span style={{ margin: "5px" }} className={badgeStateColor}>
-                room: {sensorDetails.room}
+                room: {sensorDetails.room_no}
               </span>
             </div>
           </div>
@@ -49,7 +49,7 @@ const Sensor = (props) => {
             </div>
             <div className="col">
               <span style={{ padding: "10px" }} className={badgeStateColor}>
-                {sensorDetails.co2}
+                {sensorDetails.co2_level}
               </span>
             </div>
           </div>
@@ -59,7 +59,7 @@ const Sensor = (props) => {
             </div>
             <div className="col">
               <span style={{ padding: "10px" }} className={badgeStateColor}>
-                {sensorDetails.smoke}
+                {sensorDetails.smoke_level}
               </span>
             </div>
           </div>

@@ -6,7 +6,7 @@ import DangerAndNormal from "./components/dangerAndNormal";
 
 function App() {
   return (
-    <div class="container">
+    <div className="container">
       <Header />
       <DangerAndNormal />
       <SensorList />
