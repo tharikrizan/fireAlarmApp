@@ -6,12 +6,12 @@ class SensorList extends Component {
     sensors: [],
   };
 
-  fetchingData() {
+  fetchingData = () => {
     let fetchedData;
     fetch(" https://fire-alarm-api-ds.herokuapp.com/api/sensorinfo")
       .then((res) => res.json())
       .then((data) => {
-        fetchedData = this.state.sensors.concat(data);
+        fetchedData = data;
 
         this.setState({
           sensors: fetchedData,
@@ -19,7 +19,7 @@ class SensorList extends Component {
         // sorting the sensors
         this.setState(this.state.sensors.sort((s1, s2) => s1.id - s2.id));
       });
-  }
+  };
   componentDidMount() {
     this.fetchingData();
     setInterval(this.fetchingData, 30000);
