@@ -5,8 +5,8 @@ const Sensor = (props) => {
   let sensorState;
   if (
     !sensorDetails.is_active ||
-    sensorDetails.co2 >= 5 ||
-    sensorDetails.smoke >= 5
+    sensorDetails.co2_level >= 5 ||
+    sensorDetails.smoke_level >= 5
   ) {
     sensorState = "danger";
   } else {

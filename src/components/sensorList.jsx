@@ -22,6 +22,7 @@ class SensorList extends Component {
   };
   componentDidMount() {
     this.fetchingData();
+    //making the page refresh every 30 seconds
     setInterval(this.fetchingData, 30000);
   }
 
